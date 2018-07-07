@@ -1,9 +1,11 @@
 import { combineReducers } from 'redux';
+import { reducer as burgerMenu } from 'redux-burger-menu';
 
-import { newsReducer } from './news';
-import { teamReducer } from './team';
+import { news } from './news';
+import { team } from './team';
 
 export const rootReducer = combineReducers({
-  news: newsReducer,
-  team: teamReducer,
+  burgerMenu,
+  news,
+  team,
 });

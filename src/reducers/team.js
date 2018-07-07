@@ -1,14 +1,31 @@
 import { GET_TEAM } from "../actions/getTeam";
+import { ACTIVATE_MEMBER } from "../actions/activateMember";
+import { CLEAR_MEMBER } from "../actions/clearActiveMember";
 
 const initialState = {
   loading: true,
-  members: []
+  active: null,
+  members: [],
 };
 
-export const teamReducer = (state = initialState, action) => {
+export const team = (state = initialState, action) => {
   switch (action.type) {
     case GET_TEAM:
-      return action.payload;
+      return {
+        ...state,
+        loading: false,
+        members: action.payload,
+      };
+    case ACTIVATE_MEMBER:
+      return {
+        ...state,
+        active: action.payload,
+      };
+    case CLEAR_MEMBER:
+      return {
+        ...state,
+        active: action.payload,
+      };
     default:
       return state;
   }

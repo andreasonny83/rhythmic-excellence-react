@@ -14,20 +14,22 @@ export const getTeam = () => dispatch =>
       };
     }))
     .then(members => Promise.all(members.map(data => {
-      return axios.get(`${API_ENDPOINT}media/${data.media}`)
-        .then(image => {
-          const {media, ...dataWithoutMedia} = data;
+      if (data.media) {
+        return axios.get(`${API_ENDPOINT}media/${data.media}`)
+          .then(image => {
+            const {media, ...dataWithoutMedia} = data;
 
-          return {
-            ...dataWithoutMedia,
-            picture: `${ASSETS_ENDPOINT}${image.data.source_url}`,
-          };
-        })
+            return {
+              ...dataWithoutMedia,
+              picture: `${ASSETS_ENDPOINT}${image.data.source_url}`,
+            };
+          });
+      } else {
+        const {media, ...dataWithoutMedia} = data;
+        return dataWithoutMedia;
+      }
     })))
     .then(members => dispatch({
       type: GET_TEAM,
-      payload: {
-        loading: false,
-        members,
-      },
+      payload: members,
     }));

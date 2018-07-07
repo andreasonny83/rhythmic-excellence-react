@@ -5,7 +5,7 @@ const initialState = {
   items: []
 };
 
-export const newsReducer = (state = initialState, action) => {
+export const news = (state = initialState, action) => {
   switch (action.type) {
     case GET_NEWS:
       return action.payload;

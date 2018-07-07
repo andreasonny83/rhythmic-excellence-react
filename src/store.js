@@ -6,7 +6,11 @@ import thunk from 'redux-thunk';
 
 import { rootReducer } from './reducers';
 
-const initialState = {};
+const initialState = {
+  burgerMenu: {
+    isOpen: false,
+  }
+};
 
 export const history = createBrowserHistory();
 

@@ -5,8 +5,6 @@ import './App.css';
 export default ({ routes }) => (
   <div className="App">
     <Navbar />
-    <div className="content container">
-      { routes }
-    </div>
+    { routes }
   </div>
 );
