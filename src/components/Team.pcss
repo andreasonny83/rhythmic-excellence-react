@@ -18,7 +18,6 @@
 .TeamList .TeamMember__background.visible {
   position: fixed;
   background-color: var(--transparent-secondary);
-  background-color: var(--transparent-secondary);
   top: 0;
   left: 0;
   width: 100%;
@@ -29,16 +28,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .TeamList .TeamMember.active .TeamMember__container {
@@ -73,17 +65,13 @@
   height: 3.6em;
   border-radius: 50%;
   background-color: var(--primary);
-  background-color: var(--primary);
-  -webkit-transform: translate(1.2em,-1.2em);
-          transform: translate(1.2em,-1.2em);
-  -webkit-box-shadow: 2px 2px 8px rgba(35,35,35,0.4);
-          box-shadow: 2px 2px 8px rgba(35,35,35,0.4);
+  transform: translate(1.2em,-1.2em);
+  box-shadow: 2px 2px 8px rgba(35,35,35,0.4);
   z-index: 99;
 }
 
 .TeamList .TeamMember.active .TeamMember__dismiss:hover button {
-  -webkit-transform: rotateZ(180deg);
-          transform: rotateZ(180deg);
+  transform: rotateZ(180deg);
 }
 
 .TeamList .TeamMember .TeamMember__dismiss button svg * {
@@ -98,34 +86,25 @@
   background: transparent;
   line-height: 0;
   cursor: pointer;
-  -webkit-transition: -webkit-transform .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  transition: -webkit-transform .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   transition: transform .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  transition: transform .5s cubic-bezier(0.25, 0.46, 0.45, 0.94), -webkit-transform .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .TeamList .TeamMember .TeamMember__container__picture img {
   border-radius: 50%;
-  -webkit-filter: brightness(130%) contrast(50%) sepia(75%) saturate(50%);
-          filter: brightness(130%) contrast(50%) sepia(75%) saturate(50%);
-  -webkit-transition: -webkit-filter .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  transition: -webkit-filter .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  filter: brightness(130%) contrast(50%) sepia(75%) saturate(50%);
   transition: filter .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  transition: filter .5s cubic-bezier(0.25, 0.46, 0.45, 0.94), -webkit-filter .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .TeamList .TeamMember.active .TeamMember__container__picture img {
   border-radius: 0;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  -webkit-filter: none;
-          filter: none;
+  filter: none;
   width: 100%;
 }
 
 .TeamList .TeamMember:hover .TeamMember__container__picture img {
-  -webkit-filter: unset;
-          filter: unset;
+  filter: unset;
   cursor: pointer;
 }
 

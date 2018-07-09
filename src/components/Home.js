@@ -19,7 +19,7 @@ export class Home extends Component {
     return (
       <div className="Home">
         <div className={this.state.show + ' hero-bg'}>
-          <NavLink className="home-link" to="/">
+          <NavLink className="home-link" exact to="/">
             <h1>Rhythmic Excellence</h1>
           </NavLink>
           <img className={this.state.show + ' hero-logo'}
