@@ -1,0 +1,19 @@
+backend:
+  name: github
+  branch: master
+  repo: andreasonny83/rhythmic-excellence-react
+
+publish_mode: editorial_workflow
+
+media_folder: __media
+
+collections:
+  - name: team
+    label: Team
+    folder: __posts/team
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {name: name, label: Name}
+      - {name: description, label: Description, widget: markdown}
+      - {name: avatar, label: Avatar, widget: "image"}
