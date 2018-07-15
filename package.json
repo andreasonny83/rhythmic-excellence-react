@@ -2,6 +2,18 @@
   "name": "rhythmic-excellence-react",
   "version": "0.0.0",
   "private": true,
+  "scripts": {
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-postcss start-js",
+    "build-js": "react-scripts build",
+    "build": "npm-run-all build-postcss build-js",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "build-postcss": "postcss --env=production --dir=src/ --ext=css --base=src/ src/*.pcss src/**/*.pcss",
+    "watch-postcss": "postcss --dir=src/ --ext=css --verbose --base=src/ -w src/*.pcss src/**/*.pcss",
+    "deploy": "cd build && now --token $NOW_TOKEN && now alias --token $NOW_TOKEN",
+    "now-build": "echo 'Built on Travis CI'"
+  },
   "dependencies": {
     "axios": "^0.18.0",
     "connected-react-router": "^4.3.0",
@@ -16,16 +28,6 @@
     "redux-burger-menu": "^0.2.7",
     "redux-devtools-extension": "^2.13.4",
     "redux-thunk": "^2.3.0"
-  },
-  "scripts": {
-    "start-js": "react-scripts start",
-    "start": "npm-run-all -p watch-postcss start-js",
-    "build-js": "react-scripts build",
-    "build": "npm-run-all build-postcss build-js",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "build-postcss": "postcss --env=production --dir=src/ --ext=css --base=src/ src/*.pcss src/**/*.pcss",
-    "watch-postcss": "postcss --dir=src/ --ext=css --verbose --base=src/ -w src/*.pcss src/**/*.pcss"
   },
   "devDependencies": {
     "autoprefixer": "^8.6.5",
