@@ -12,6 +12,7 @@
     "build-postcss": "postcss --env=production --dir=src/ --ext=css --base=src/ src/*.pcss src/**/*.pcss",
     "watch-postcss": "postcss --dir=src/ --ext=css --verbose --base=src/ -w src/*.pcss src/**/*.pcss",
     "deploy": "cd build && now --token $NOW_TOKEN && now alias --token $NOW_TOKEN",
+    "deploy:from:local": "cd build && now && now alias",
     "now-build": "echo 'Built on Travis CI'"
   },
   "dependencies": {

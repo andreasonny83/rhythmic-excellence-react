@@ -18,5 +18,4 @@ const AppContainer = ({ routes, router }) => {
 
 const mapStateToProps = ({router}) => ({router});
 
-
 export const App = connect(mapStateToProps)(AppContainer);
