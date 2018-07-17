@@ -1,0 +1,24 @@
+{
+  "rules": [
+    {
+      "pathname": "/",
+      "dest": "ui-rhythmic-excellence.now.sh"
+    },
+    {
+      "pathname": "/static/**",
+      "dest": "ui-rhythmic-excellence.now.sh/static"
+    },
+    {
+      "pathname": "/img/**",
+      "dest": "ui-rhythmic-excellence.now.sh/img"
+    },
+    {
+      "pathname": "/admin",
+      "dest": "rhythmic-excellence-admin.now.sh/"
+    },
+    {
+      "pathname": "/admin/**",
+      "dest": "rhythmic-excellence-admin.now.sh/"
+    }
+  ]
+}

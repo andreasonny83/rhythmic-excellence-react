@@ -5,17 +5,17 @@ import Navbar from './components/Navbar';
 import { Topbar } from './components/Topbar';
 
 const AppContainer = ({ routes, router }) => {
-  const topBar =
-    router.location.pathname !== '/' ? <Topbar /> : '';
+  const topBar = router.location.pathname !== '/' ? <Topbar /> : '';
 
   return (
-  <div className="App">
-    <Navbar />
-    { topBar }
-    { routes }
-  </div>
-)};
+    <div className="App">
+      <Navbar />
+      {topBar}
+      {routes}
+    </div>
+  );
+};
 
-const mapStateToProps = ({router}) => ({router});
+const mapStateToProps = ({ router }) => ({ router });
 
 export const App = connect(mapStateToProps)(AppContainer);
