@@ -7,11 +7,12 @@ backend:
 publish_mode: editorial_workflow
 
 media_folder: public/_media
+public_folder: "/_media"
 
 collections:
   - label: "Team"
     name: team
-    folder: public/_posts/team
+    folder: src/posts/team
     create: true
     fields:
     - {label: "Title", name: "title", widget: "string"}

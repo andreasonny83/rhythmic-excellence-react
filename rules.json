@@ -5,6 +5,10 @@
       "dest": "ui-rhythmic-excellence.now.sh"
     },
     {
+      "pathname": "/_media/**",
+      "dest": "ui-rhythmic-excellence.now.sh/_media"
+    },
+    {
       "pathname": "/static/**",
       "dest": "ui-rhythmic-excellence.now.sh/static"
     },
@@ -14,11 +18,18 @@
     },
     {
       "pathname": "/admin",
-      "dest": "rhythmic-excellence-admin.now.sh/"
+      "dest": "ui-rhythmic-excellence.now.sh/admin"
+    },
+    {
+      "pathname": "/admin/*",
+      "dest": "ui-rhythmic-excellence.now.sh/admin"
     },
     {
       "pathname": "/admin/**",
-      "dest": "rhythmic-excellence-admin.now.sh/"
+      "dest": "ui-rhythmic-excellence.now.sh/admin"
+    },
+    {
+      "dest": "ui-rhythmic-excellence.now.sh"
     }
   ]
 }
