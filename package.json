@@ -17,7 +17,7 @@
     "deploy:admin": "cd admin && now --token $NOW_TOKEN && now alias --token $NOW_TOKEN",
     "deploy": "npm run deploy:client && npm run rules",
     "deploy:from:local:client": "cd build && now && now alias",
-    "deploy:from:local:admin": "cd admin && now && now alias",
+    "deploy:from:local:admin": "cd auth-server && now && now alias",
     "now-build": "echo 'Built on Travis CI'"
   },
   "dependencies": {
