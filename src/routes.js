@@ -4,7 +4,7 @@ import { Home } from './components/Home';
 import NewsContainer from './components/NewsContainer';
 import TeamContainer from './components/TeamContainer';
 
-const routes = (
+export const routes = (
   <Switch>
     <Route exact path="/" component={Home} />
     <Route path="/news" component={NewsContainer} />
@@ -12,5 +12,3 @@ const routes = (
     {/* <Route component={NoMatch404} /> */}
   </Switch>
 );
-
-export default routes;

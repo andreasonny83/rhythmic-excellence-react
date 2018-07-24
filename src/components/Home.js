@@ -7,7 +7,7 @@ export class Home extends Component {
   constructor() {
     super();
     this.state = {
-      show: '',
+      show: ''
     };
   }
 
@@ -22,9 +22,11 @@ export class Home extends Component {
           <NavLink className="home-link" exact to="/">
             <h1>Rhythmic Excellence</h1>
           </NavLink>
-          <img className={this.state.show + ' hero-logo'}
-               src="/img/rhythmicexcellence.png"
-               alt="rhythmicexcellence" />
+          <img
+            className={this.state.show + ' hero-logo'}
+            src={`${process.env.PUBLIC_URL}/img/rhythmicexcellence.png`}
+            alt="rhythmicexcellence"
+          />
         </div>
       </div>
     );
