@@ -1,6 +1,6 @@
 ---
 title: eleonora
 description: eleonora
-avatar: /rhythmic-excellence-react/_media/eleonora-baio.jpg
+avatar: /rhythmic-excellence-react/img/eleonora-baio.jpg
 ---
 
