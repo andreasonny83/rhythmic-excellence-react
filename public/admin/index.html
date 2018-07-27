@@ -10,7 +10,6 @@
 </head>
 
 <body>
-  <script src="https://identity-js.netlify.com/v1/netlify-identity-widget.js"></script>
   <script src="https://unpkg.com/netlify-cms@^1.0.0/dist/cms.js"></script>
   <script>
     const CMS = window.CMS;
@@ -18,7 +17,7 @@
     CMS.registerPreviewStyle(
       'https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css',
     );
-    CMS.registerPreviewStyle('/admin/team.css');
+    CMS.registerPreviewStyle('team.css');
 
     const PostPreview = createClass({
       render: function () {
@@ -38,6 +37,7 @@
 
     // Return to home when user logging out
     window.netlifyIdentity.on('logout', function () {
+      console.log('logging out');
       document.location.href = '/'
     });
   </script>

@@ -45,6 +45,7 @@
       netlifyIdentity.on('init', function (user) {
         if (!user) {
           netlifyIdentity.on('login', function () {
+            console.log('logging in');
             document.location.href = '/admin/'
           })
         }
