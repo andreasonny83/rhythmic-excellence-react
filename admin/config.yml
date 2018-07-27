@@ -1,0 +1,20 @@
+backend:
+  name: github
+  repo: andreasonny83/rhythmic-excellence-react
+  base_url: https://rhythmic-excellence-api.now.sh
+  auth_endpoint: auth
+
+publish_mode: editorial_workflow
+
+media_folder: public/uploads
+public_folder: "rhythmic-excellence-react/uploads"
+
+collections:
+  - label: "Team"
+    name: team
+    folder: src/posts/team
+    create: true
+    fields:
+    - {label: "Title", name: "title", widget: "string"}
+    - {label: "Description", name: "description", widget: "markdown"}
+    - {label: "avatar", name: "avatar", widget: "image"}
