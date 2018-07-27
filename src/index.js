@@ -7,8 +7,9 @@ import { store, history } from './store';
 import { routes } from './routes';
 
 import { App } from './App';
-// import registerServiceWorker from './registerServiceWorker';
+import registerServiceWorker, { unregister } from './registerServiceWorker';
 import './index.css';
+import data from './data.json';
 
 // Render to DOM
 ReactDOM.render(
@@ -20,4 +21,13 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-// registerServiceWorker();
+if (process.env.REACT_APP_SITE_URL && 'localStorage' in window) {
+  window.localStorage.setItem('netlifySiteURL', process.env.REACT_APP_SITE_URL);
+}
+
+const globalSettings =
+  data.settings && data.settings.filter(doc => doc.name === 'global')[0];
+
+if (globalSettings) {
+  globalSettings.enableServiceWorker ? registerServiceWorker() : unregister();
+}

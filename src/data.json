@@ -1,0 +1,12 @@
+{
+  "settings": [
+    {
+      "siteTitle": "Netlify CMS + React Starter",
+      "siteUrl": "https://my-url.com",
+      "siteDescription":
+        "A starter project for creating lightning-fast, offline-first websites with Netlify CMS and React.",
+      "enableServiceWorker": true,
+      "name": "global"
+    }
+  ]
+}

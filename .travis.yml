@@ -10,14 +10,15 @@ cache:
 install: npm ci
 
 script:
-  - npm run build
   # - npm test
+  - npm run build
 
-before_deploy: npm install -g now # Install Now CLI on Travis
+# before_deploy: npm install -g now # Install Now CLI on Travis
 
 deploy:
-  - provider: script
-    script: npm run deploy
+  - provider: pages
+    local_dir: "build"
+    github_token: $GH_TOKEN # Set in travis-ci.org dashboard
     skip_cleanup: true
     on:
       master: true
