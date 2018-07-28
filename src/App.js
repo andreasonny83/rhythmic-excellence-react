@@ -5,7 +5,7 @@ import Navbar from './components/Navbar';
 import { Topbar } from './components/Topbar';
 
 const AppContainer = ({ routes, router }) => {
-  const topBar = router.location.pathname !== '/' ? <Topbar /> : '';
+  const topBar = router.location.pathname !== '/app' ? <Topbar /> : '';
 
   return (
     <div className="App">

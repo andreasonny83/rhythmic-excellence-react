@@ -7,39 +7,15 @@
   <title>Rhythmic Excellence - Content Manager</title>
   <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://unpkg.com/netlify-cms@^1.0.0/dist/cms.css" />
+  <link rel="stylesheet" href="/admin/admin.css" />
 </head>
 
 <body>
   <script src="https://unpkg.com/netlify-cms@^1.0.0/dist/cms.js"></script>
+  <script src="/admin/team.js"></script>
   <script>
-    const CMS = window.CMS;
-
-    CMS.registerPreviewStyle(
-      'https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css',
-    );
-    CMS.registerPreviewStyle('team.css');
-
-    const PostPreview = createClass({
-      render: function () {
-        const entry = this.props.entry;
-        const title = entry.getIn(['data', 'title']);
-        const image = entry.getIn(['data', 'avatar']);
-
-        return h('div', { className: 'team' },
-          h('h1', {}, title.toUpperCase()),
-          image ? h('img', { src: image.toString(), className: 'avatar' }) : null,
-        );
-      }
-    });
-
-    // Register custom preview Templates
-    CMS.registerPreviewTemplate('team', PostPreview);
-
-    // Return to home when user logging out
-    window.netlifyIdentity.on('logout', function () {
-      console.log('logging out');
-      document.location.href = '/'
-    });
+    window.CMS.registerPreviewStyle(
+      'https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css');
   </script>
 </body>
 

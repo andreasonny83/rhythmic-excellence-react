@@ -5,11 +5,13 @@ export const GET_NEWS = '@@GET_NEWS';
 
 export const getNews = () => dispatch =>
   axios
-    .get(`${data.apiUrl}posts?categories=7&per_page=1&page=1&orderby=date`)
+    .get(
+      `${data.settings.apiUrl}posts?categories=7&per_page=1&page=1&orderby=date`
+    )
     .then(res =>
       res.data.map(({ id, content, date, title }) => {
         const regex = /\/content\/uploads/gim;
-        const subst = `${data.assetsUrl}content/uploads/`;
+        const subst = `${data.settings.assetsUrl}content/uploads/`;
         const newContent = content.rendered.replace(regex, subst);
 
         return {

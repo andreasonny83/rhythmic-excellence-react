@@ -5,7 +5,7 @@ export const GET_TEAM = '@@GET_TEAM';
 
 export const getTeam = () => dispatch =>
   axios
-    .get(`${data.apiUrl}posts?categories=3&per_page=10`)
+    .get(`${data.settings.apiUrl}posts?categories=3&per_page=10`)
     .then(res =>
       res.data.map(({ id, content, title, featured_media }) => {
         return {
@@ -18,20 +18,20 @@ export const getTeam = () => dispatch =>
     )
     .then(members =>
       Promise.all(
-        members.map(data => {
-          if (data.media) {
+        members.map(res => {
+          if (res.media) {
             return axios
-              .get(`${data.apiUrl}media/${data.media}`)
+              .get(`${data.settings.apiUrl}media/${res.media}`)
               .then(image => {
-                const { media, ...dataWithoutMedia } = data;
+                const { media, ...dataWithoutMedia } = res;
 
                 return {
                   ...dataWithoutMedia,
-                  picture: `${data.assetsUrl}${image.data.source_url}`
+                  picture: `${data.settings.assetsUrl}${image.data.source_url}`
                 };
               });
           } else {
-            const { media, ...dataWithoutMedia } = data;
+            const { media, ...dataWithoutMedia } = res;
             return dataWithoutMedia;
           }
         })

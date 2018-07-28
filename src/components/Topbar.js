@@ -8,7 +8,7 @@ export class Topbar extends Component {
     return (
       <div className="Topbar">
         <h1>
-          <NavLink className="home" exact to="/">
+          <NavLink className="home" exact to="/app">
             Rhythmic Excellence
           </NavLink>
         </h1>

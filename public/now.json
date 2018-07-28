@@ -1,0 +1,17 @@
+{
+  "name": "rhythmic-excellence",
+  "alias": "rhythmic-excellence",
+  "type": "static",
+  "public": true,
+  "static": {
+    "rewrites": [
+      { "source": "/config.yml", "destination": "/admin/config.yml" },
+      { "source": "app/**", "destination": "/index.html" }
+    ],
+    "redirects": [{ "source": "/", "destination": "/app" }],
+    "directoryListing": false,
+    "renderSingle": false,
+    "trailingSlash": false,
+    "cleanUrls": true
+  }
+}

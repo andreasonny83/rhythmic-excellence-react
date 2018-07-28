@@ -1,14 +1,12 @@
 {
-  "settings": [
-    {
-      "siteTitle": "Netlify CMS + React Starter",
-      "siteUrl": "https://my-url.com",
-      "apiUrl": "http://rhythmicexcellence.london/wp-json/wp/v2/",
-      "assetsUrl": "https://rhythmicexcellence.london/",
-      "siteDescription":
-        "A starter project for creating lightning-fast, offline-first websites with Netlify CMS and React.",
-      "enableServiceWorker": false,
-      "name": "global"
-    }
-  ]
+  "settings": {
+    "siteTitle": "Netlify CMS + React Starter",
+    "siteUrl": "https://my-url.com",
+    "apiUrl": "http://rhythmicexcellence.london/wp-json/wp/v2/",
+    "assetsUrl": "http://rhythmicexcellence.london/",
+    "siteDescription":
+      "A starter project for creating lightning-fast, offline-first websites with Netlify CMS and React.",
+    "enableServiceWorker": false,
+    "name": "global"
+  }
 }

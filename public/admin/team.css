@@ -1,18 +1,18 @@
-body {
+.team {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 0.75rem;
+  grid-auto-flow: row;
+  justify-items: center;
+  font-size: 1rem;
+}
+
+.team h1 {
+  font-size: 2.2em;
   margin: 0;
-  padding: 20px;
-  color: #4a4a4a;
-  font-size: 1em;
-  line-height: 1.5;
-  font-family: 'Lobster', Lucida Grande, sans-serif;
 }
 
-html,
-body {
-  min-width: 320px;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
+.team img {
+  max-width: 22em;
+  border-radius: 50%;
 }

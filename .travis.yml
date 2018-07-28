@@ -13,12 +13,11 @@ script:
   # - npm test
   - npm run build
 
-# before_deploy: npm install -g now # Install Now CLI on Travis
+before_deploy: npm install -g now # Install Now CLI on Travis
 
 deploy:
-  - provider: pages
-    local_dir: "build"
-    github_token: $GH_TOKEN # Set in travis-ci.org dashboard
+  - provider: script
+    script: npm run deploy
     skip_cleanup: true
     on:
       master: true
