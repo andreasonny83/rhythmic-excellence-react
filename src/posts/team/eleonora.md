@@ -1,6 +1,6 @@
 ---
 title: Eleonora Baio
-description: Eleonora bla bla bla...
+description: Test
 avatar: /uploads/eleonora-baio.jpg
 ---
 
